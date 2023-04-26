@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+$color01 : #ff0;
+$bg-color02 : #ccc;
+
+
+h2 {
+  color : $color01;
+}
+
+p {
+  background-color : $bg-color02;
+}

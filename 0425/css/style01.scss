@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+* {
+  margin : 0;
+  padding : 0;
+}
+
+
+
+// 변수
+
+$myFont : "맑은 고딕", arial, sans-serif;
+
+$fontColor : #333;
+
+$bigFont : 32px;
+
+$baseFont : 16px;
+
+$boxWidth : 1280px;
+
+$bgColor : #ff0;
+
+
+
+@mixin sect_area($m_t, $m_b){
+
+  margin : 0 auto;
+
+  // 윗 부분 마진
+  margin-top : $m_t;
+  // 아래 부분 마진
+  margin-bottom : $m_b;
+
+  width : $boxWidth;
+  padding : 32px;
+  box-sizing: border-box;
+
+}
+
+@mixin tab($width, $height){
+  position : relative;
+
+  ul{
+
+  }
+  .tab_btn{
+    position : absolute;
+
+  }
+  .tab_btn > a {
+
+  }
+
+  .tab_ctnt {
+    
+  }
+  
+
+}
+
+
+body{
+  font-family: $myFont;
+  font-size : $baseFont;
+  color : $fontColor;
+}
+
+h3{
+  font-size : $bigFont;
+}
+
+
+.wrap {
+  @include  sect_area(50px, 50px);
+  background-color : #ccc;
+}

@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+
+
+@import 'style01.scss';
+
+h2{
+  font-size : $bigFont;
+  color : $fontColor;
+  background-color : $bgColor;
+}
+
+
+
+
+.login_form{
+  input[type=text], input[type=password], input[type=email], input[type=number] {
+    display : block;
+    border : none;
+    background : none;
+    border-radius : 15px;
+    padding : 0;
+    margin : 0;
+    text-indent : 15px;
+    width : 300px;
+    height : 50px;
+    font-size : 18px;
+    margin : 16px auto;
+    border-bottom : 2px solid #000;
+    border-top : 1px solid #eee;
+  }
+  button {
+    display : block;
+    width : 300px;
+    height : 45px;
+    margin : 16px auto;
+    border-radius : 15px;
+    background : none;
+    border : none;
+    font-size : 18px;
+    line-height : 45px;
+    font-weight : bold;
+  }
+
+  .sp_img {
+    border-radius : 10px;
+    width : 45px;
+    height : 45px;
+  }
+
+  #naver_logo {
+    background-position : -438px -98px;
+    position : relative;
+    z-index: 2;
+  }
+
+  #kakao_logo {
+    background-position : -145px -203px;
+  }
+
+}
+
+
+
+
+
+@mixin bgfCol($b,$f){
+  background-color : $b !important;
+  color : $f !important;
+}
+
+.lgbtn{
+  @include bgfCol(#000,#fff) ;
+}
+
+.navbtn{
+  @include bgfCol(#47B748,#fff) ;
+}
+
+.kakbtn{
+  @include bgfCol(#F7E600, #3A1D1D) ;
+}
+
+.sp_img01{
+  display : inline-block;
+  background-color : #fff;
+  background-image : url('../images/sns_icon.png');
+  background-size : 734px;
+  border-radius : 10px;
+    width : 43px;
+    height : 43px;
+}
+
+.sp_img02{
+  display : inline-block;
+  background-image : url('../images/sns_icon.png');
+  background-size : 560px;
+  border-radius : 10px;
+    width : 45px;
+    height : 45px;
+}

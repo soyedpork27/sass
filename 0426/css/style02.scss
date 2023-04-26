@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+
+.box {
+  height : 50px;
+  border : 3px solid #000;
+  margin-bottom : 20px;
+  box-sizing : border-box;
+}
+
+// $width01 : 400px;
+// $width02 : 700px;
+
+// .box01{
+//   width : $width01;
+//   background-color : if($width01 > 500,pink, lightblue);
+// }
+
+// .box02{
+//   width : $width02;
+//   background-color : if($width02 > 500,pink, lightblue);
+// }
+
+// $width03 : 768px;
+// $width04 : 1025px;
+
+
+@mixin wid-tab($width) {
+  width : $width;
+  @if($width >= 1025px){
+    background-color : aquamarine;
+  }@else if( 1024px >= $width && $width >= 767px ){
+    background-color : pink;
+  }@else{
+    background-color : lightblue;
+  }
+}
+
+.box03{
+  @include wid-tab(1100px);
+}
+
+.box04{
+  @include wid-tab(800px);
+}
+
+.box05{
+  @include wid-tab(430px);
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_sass문법 - 믹싱기법(mixin, include)</title>
+  <link rel="stylesheet" href="./css/style02.css">
+</head>
+<body>
+  <h2>02_sass문법 - 믹싱기법(mixin, include)</h2>
+  <h3>1. $mixin문법</h3>
+  <p>웹사이트 전체에 재사용할 css 코드를 정의하는 문.</p>
+  <pre>
+    @mixin mixin명 {
+      // 반복해서 사용할 스타일 서식을 작성한다.
+    }
+  </pre>
+
+  <h3>2. @include문법</h3>
+  <p>@mixin을 선택자에 포함하는데 사용하는 지시문</p>
+  <pre>
+    선택자 {
+      @include mixin명 : 
+    }
+  </pre>
+
+
+  <h3 class="title01">
+    h3태그 요소를 2개 작성하여 동일한 서식과 다른 서식 적용하기
+  </h3>
+  <h3 class="title02">mixin서식 적용하기</h3>
+
+
+  <h3 class="title02">
+    믹스인 사용하여 글자 생략하기  
+  </h3>
+  <p class="txt-omit">타고난 재성이 대단히 풍부한 사주입니다. 재물의 성향이 많이 분포되어 있는 사주이므로 누구보다도 부자에 대한 기회가 많이 주어지는 분입니다. 자금의 흐름에 직접적으로 관여하는 일을 하시면 좋습니다. 투자 업무를 담당하거나 은행 혹은 증권 계통에 밀접한 관련을 가지고 계시는 경우 성과가 클 것으로 보입니다. 장사를 하시는 경우 물이나 유통과 관련된 일을 하시면 부자가 될 확률도 높고 건강에도 도움이 될 것입니다. 부자란 시기를 활용할 줄 아는 지혜가 있어야 함을 명심하시기 바랍니다. 올해는 부자가 되기 위한 꿈을 실현에 옮기셔야 하는 해입니다. 우선 운의 흐름상 기회나 여건은 충분히 주어질 것으로 보입니다. 올해는 소극적인 활용보다는 다소 공격적이고 적극적으로 움직이시기 바랍니다. 그렇다고 무모한 곳에 무조건 투자하라는 의미는 아니니 잘 판단하고 분별하시기 바랍니다. 지위나 위치에 대한 욕심이 많은 사주라 본인이 직접 책임을 져야 하는 위치에 있을 것으로 보입니다. 책임을 진다는 말은...</p>
+
+
+  <h3>예제 - 문단태그안에 span 요소 2 개를 작성하여 버튼 서식 각각 적용하기</h3>
+
+  <p>예제 - 문단태그 안에 <span class="btn01">span 요소</span> 2 개를 작성하여 <span class="btn02">버튼 서식</span> 각각 적용하기</p>
+
+
+
+
+  <input type="checkbox" name="toggle01" id="toggle01">
+  <div class="toggle_box">
+    <label for="toggle01" class="toggle01-label">
+      <span class="toggle_bar">&nbsp;</span>
+      <span class="toggle_bar">&nbsp;</span>
+      <span class="toggle_bar">&nbsp;</span>
+    </label>
+  </div>
+
+
+
+
+
+  <h3>
+    4. @mixin에 매개변수 처리하기
+  </h3>
+  <p>@mixin 함수처럼 매개변수와 인수값을 가질 수 있다.</p>
+  <p>매개변수를 사용하여 다양한 결과물을 만들 수 있다.</p>
+  <pre>
+    <div id="box01">
+      box01
+    </div>
+    <div id="box02">
+      box02
+    </div>
+  </pre>
+
+
+
+  <table class="border">
+    <caption>표 제목</caption>
+    <thead>
+      <tr>
+        <th>컬럼</th>
+        <th>컬럼</th>
+        <th>컬럼</th>
+        <th>컬럼</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>데이터</td>
+        <td>데이터</td>
+        <td>데이터</td>
+        <td>데이터</td>
+      </tr>
+      <tr>
+        <td>데이터</td>
+        <td>데이터</td>
+        <td>데이터</td>
+        <td>데이터</td>
+      </tr>
+      <tr>
+        <td>데이터</td>
+        <td>데이터</td>
+        <td>데이터</td>
+        <td>데이터</td>
+      </tr>
+      <tr>
+        <td>데이터</td>
+        <td>데이터</td>
+        <td>데이터</td>
+        <td>데이터</td>
+      </tr>
+      <tr>
+        <td>데이터</td>
+        <td>데이터</td>
+        <td>데이터</td>
+        <td>데이터</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <table class="border01">
+    <caption>
+      두 번째 표
+    </caption>
+    <thead>
+      <tr>
+        <th>컬럼1</th>
+        <th>컬럼2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>데이터1</td>
+        <td>데이터2</td>
+      </tr>
+      <tr>
+        <td>데이터1</td>
+        <td>데이터2</td>
+      </tr>
+      <tr>
+        <td>데이터1</td>
+        <td>데이터2</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+  <div class="skill_box">
+    <h4>skill</h4>
+    <div class="bar">
+      <div class="stat_bar01">기획</div>
+    </div>
+    <div class="bar">
+      <div class="stat_bar02">설계</div>
+    </div>
+    <div class="bar">
+      <div class="stat_bar03">UI/UX디자인&#40;figma&#41;</div>
+    </div>
+    <div class="bar">
+      <div class="stat_bar04">HTML5</div>
+    </div>
+    <div class="bar">
+      <div class="stat_bar05">CSS3</div>
+    </div>
+    <div class="bar">
+      <div class="stat_bar06">JAVASCRIPT/JQUERY</div>
+    </div>
+    <div class="bar">
+      <div class="stat_bar07">React</div>
+    </div>
+    <div class="bar">
+      <div class="stat_bar08">PHP</div>
+    </div>
+    <div class="bar">
+      <div class="stat_bar09">SQL</div>
+    </div>
+    <div class="bar">
+      <div class="stat_bar10">웹 표준&#47;접근성</div>
+    </div>
+    <div class="bar">
+      <div class="stat_bar11">git&#38;github</div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+</body>
+</html>

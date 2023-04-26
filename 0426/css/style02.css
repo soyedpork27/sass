@@ -1,0 +1,21 @@
+.box {
+  height: 50px;
+  border: 3px solid #000;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.box03 {
+  width: 1100px;
+  background-color: aquamarine;
+}
+
+.box04 {
+  width: 800px;
+  background-color: pink;
+}
+
+.box05 {
+  width: 430px;
+  background-color: pink;
+}/*# sourceMappingURL=style02.css.map */

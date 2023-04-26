@@ -1,0 +1,365 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR:wght@500&display=swap');
+
+
+  $bg-color : #ff0;
+  $txt-color01 : #f00;
+  $txt-color02 : #00f;
+
+  @mixin h3txt {
+    font-family : "Noto Sans KR", "맑은 고딕", arial, sans-serif;
+    font-size : 30px;
+  }
+
+  @mixin txt-omit {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+
+  .title01 {
+    @include h3txt;
+    background-color : $bg-color;
+    color : $txt-color01;
+  }
+  .title02 {
+    @include h3txt;
+    background-color : $bg-color;
+    color : $txt-color02;
+  }
+
+  .txt-omit {
+    @include txt-omit;
+    width : 350px;
+    border : 1px solid #000;
+  }
+
+
+
+
+  @mixin btn01-font {
+    background-color : #111;
+    color : #fff;
+    font-size : 22px;
+    text-align : center;
+    font-weight : bold;
+  }
+  @mixin btn02-font {
+    background-color : #111;
+    color : #ff0;
+    font-size : 22px;
+    text-align : center;
+    font-weight : bold;
+  }
+
+  @mixin btn02-hover {
+    background-color : #ff0;
+    color : #111;
+    transition : .5s;
+    font-size : 22px;
+    text-align : center;
+    font-weight : bold;
+  }
+
+
+  @mixin btn01-area {
+    width : 200px;
+    height : 50px;
+    display : inline-block;
+    border-radius : 20px;
+    margin : 10px 20px;
+    line-height : 50px;
+    cursor : pointer;
+  }
+
+  .btn01 {
+    @include btn01-font;
+    @include btn01-area;
+  }
+
+  .btn02 {
+    @include btn02-font;
+    @include btn01-area;
+    transition :.5s;
+  }
+
+  .btn02:hover {
+    @include btn02-hover;
+  }
+
+
+
+  #toggle01 {
+    display : none;
+  }
+
+  .toggle_box {
+    width : 50px;
+    height : 50px;
+    margin : 50px;
+    border : 1px solid #ccc;
+    border-radius : 10px;
+    cursor : pointer;
+  }
+
+  .toggle01-label {
+    width : 100%;
+    height : 100%;
+    display : block;
+    position :relative;
+    padding-top : 9.5px;
+    box-sizing: border-box;
+
+  }
+
+  .toggle_bar {
+    background-color : #000;
+    width : 40px;
+    height : 4px;
+    display : block;
+    border-radius : 10px;
+    margin-left : 5px;
+    text-indent : 5px;
+    transition : .3s;
+  }
+  .toggle_bar:first-child {
+  }
+
+  .toggle_bar:nth-child(2){
+    position : absolute;
+    left : 0px;
+    top : 23px;
+  }
+
+  .toggle_bar:last-child {
+    margin-top : 23px;
+  }
+
+
+
+  @mixin toggle01 {
+    background-color : #000;
+    width : 40px;
+    height : 4px;
+    display : block;
+    border-radius : 10px;
+    margin-top : 9.5px;
+    margin-left : 5px;
+    text-indent : 5px;
+  }
+
+  @mixin toggle02 {
+    background-color : #000;
+    width : 40px;
+    height : 4px;
+    display : block;
+    border-radius : 10px;
+    margin-top : 9.5px;
+    margin-left : 5px;
+    text-indent : 5px;
+    position : absolute;
+    top : 14px;
+    left : 0px;
+    transform : rotate(45deg) ;
+  }
+
+  @mixin toggle03 {
+    background-color : #000;
+    width : 40px;
+    height : 4px;
+    display : block;
+    border-radius : 10px;
+    margin-top : 9.5px;
+    margin-left : 5px;
+    text-indent : 5px;
+    position : absolute;
+    bottom : 22px;
+    left : 0px;
+    transform : rotate(-45deg) ;
+  }
+  
+
+  #toggle01:checked + div .toggle_bar:first-child {
+    @include toggle02;
+  }
+
+  #toggle01:checked + div .toggle_bar:nth-child(2){
+    display : none;
+  }
+  #toggle01:checked + div .toggle_bar:last-child {
+    @include toggle03;
+  }
+
+
+
+
+  @mixin divBox($bg-color){
+
+    backgrounbd-color : $bg-color;
+  }
+
+
+  #box01 {
+    @include divBox(#00f);
+  }
+
+  #box01{
+    @include divBox(#f00);
+  }
+
+
+
+
+
+
+  @mixin tableBox($hbg-color : #111, $hf-color : #fff , $bbg-color : #ccc) {
+
+      width : 300px;
+      border : 1px solid #000;
+      border-collapse : collapse;
+
+
+    caption {
+      font-size : 32px;
+      font-weight : bold;
+      text-align : start;
+      text-indent : 16px;
+      margin-bottom : 12px;
+      margin-top : 32px;
+    }
+    thead{
+      background-color : $hbg-color;
+    }
+    thead th {
+      color : $hf-color;
+    }
+
+    tbody{
+
+    }
+    tbody tr:nth-child(2n) td {
+      background-color : $bbg-color;
+    }
+  }
+
+
+
+  .border {
+    @include tableBox;
+  }
+
+  .border01 {
+    @include tableBox( #00f,#f00 );
+  }
+
+
+
+
+
+  @mixin skillBox() {
+    padding : 32px 50px;
+    box-sizing : border-box;
+    width : 100%;
+
+    h4 {
+      font-size : 32px;
+      font-weight : bold;
+    }
+
+    .bar{
+      width : 70%;
+      margin : 50px 0 0 30px;
+      height : 50px;
+      background-color : #ccc;
+      border-radius : 15px;
+    }
+
+  }
+
+  
+
+  @keyframes  move01 {
+    0%{
+      width : 0%;
+      color : #111;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    100% {
+      width : $statewidth;
+      color : #fff;
+    }
+  }
+  
+
+  
+
+
+  @mixin stat( $statewidth ){
+
+      width : $statewidth;
+      height : 100%;
+      background-color : #111;
+      color : #fff;
+      text-indent : 30px;
+      font-size : 20px;
+      line-height : 50px;
+      border-radius : 15px 0 0 15px;
+      animation-duration: 3s;
+      animation-name: move;
+
+    }
+
+
+
+
+  .skill_box {
+    @include skillBox();
+  }
+
+  .stat_bar01{
+    @include stat(30%);
+  }
+
+  .stat_bar02{
+    @include stat(40%);
+  }
+
+  .stat_bar03{
+    @include stat(30%);
+  }
+
+  // .stat_bar04{
+  //   @include stat(90%);
+
+  // }
+  // .stat_bar05{
+  //   @include stat(90%);
+
+
+  // }
+  // .stat_bar06{
+  //   @include stat(85%);
+  // }
+  // .stat_bar07{
+  //   @include stat(35%);
+  // }
+  // .stat_bar08{
+  //   @include stat(80%);
+
+  // }
+  // .stat_bar09{
+  //   @include stat(55%);
+  // }
+  // .stat_bar10{
+  //   @include stat(100%);
+  // }
+  // .stat_bar11{
+  //   @include stat(85%);
+  // }
+
+
+

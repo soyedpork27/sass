@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#tab01-01:checked ~ .tab01 .ctnt_area .tab_ctnt:first-child img {
+  display: block;
+}
+
+#tab01-01:checked ~ .tab01 .tab_list .tab_btn:first-child label {
+  background-color: #ff0;
+  color: rgb(118, 118, 255);
+}
+
+#tab01-02:checked ~ .tab01 .ctnt_area .tab_ctnt:nth-child(2) img {
+  display: block;
+}
+
+#tab01-02:checked ~ .tab01 .tab_list .tab_btn:nth-child(2) label {
+  background-color: #ff0;
+  color: rgb(118, 118, 255);
+}
+
+#tab01-03:checked ~ .tab01 .ctnt_area .tab_ctnt:nth-child(3) img {
+  display: block;
+}
+
+#tab01-03:checked ~ .tab01 .tab_list .tab_btn:nth-child(3) label {
+  background-color: #ff0;
+  color: rgb(118, 118, 255);
+}
+
+#tab01-04:checked ~ .tab01 .ctnt_area .tab_ctnt:last-child img {
+  display: block;
+}
+
+#tab01-04:checked ~ .tab01 .tab_list .tab_btn:last-child label {
+  background-color: #ff0;
+  color: rgb(118, 118, 255);
+}
+
+#tab02-01:checked ~ .tab02 .ctnt_area .tab_ctnt:first-child img {
+  display: block;
+}
+
+#tab02-01:checked ~ .tab02 .tab_list .tab_btn:first-child label {
+  background-color: #888;
+  color: #000;
+}
+
+#tab02-02:checked ~ .tab02 .ctnt_area .tab_ctnt:nth-child(2) img {
+  display: block;
+}
+
+#tab02-02:checked ~ .tab02 .tab_list .tab_btn:nth-child(2) label {
+  background-color: #888;
+  color: #000;
+}
+
+#tab02-03:checked ~ .tab02 .ctnt_area .tab_ctnt:nth-child(3) img {
+  display: block;
+}
+
+#tab02-03:checked ~ .tab02 .tab_list .tab_btn:nth-child(3) label {
+  background-color: #888;
+  color: #000;
+}
+
+#tab02-04:checked ~ .tab02 .ctnt_area .tab_ctnt:nth-child(4) img {
+  display: block;
+}
+
+#tab02-04:checked ~ .tab02 .tab_list .tab_btn:nth-child(4) label {
+  background-color: #888;
+  color: #000;
+}
+
+#tab02-05:checked ~ .tab02 .ctnt_area .tab_ctnt:last-child img {
+  display: block;
+}
+
+#tab02-05:checked ~ .tab02 .tab_list .tab_btn:last-child label {
+  background-color: #888;
+  color: #000;
+}
+
+.tab01 {
+  display: flex;
+  border: 3px solid #aaa;
+  height: 400px;
+  width: 1100px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.tab01 .ctnt_area {
+  width: 65%;
+  height: 100%;
+  position: relative;
+}
+.tab01 .ctnt_area ul {
+  width: 100%;
+  height: 100%;
+}
+.tab01 .ctnt_area li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tab01 .ctnt_area img {
+  width: 100%;
+  height: 100%;
+}
+.tab01 .tab_list {
+  width: 35%;
+  height: 100%;
+}
+.tab01 .tab_list ul {
+  width: 100%;
+  height: 100%;
+}
+.tab01 .tab_btn {
+  height: 25%;
+  text-align: center;
+}
+.tab01 .tab_btn label {
+  display: block;
+  height: 100%;
+  line-height: 100%;
+}
+.tab01 .tab_btn label:hover {
+  color: #000;
+  background-color: #ff0;
+}
+
+.tab02 {
+  display: flex;
+  border: 3px solid #aaa;
+  height: 400px;
+  width: 1400px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.tab02 .ctnt_area {
+  width: 45%;
+  height: 100%;
+  position: relative;
+}
+.tab02 .ctnt_area ul {
+  width: 100%;
+  height: 100%;
+}
+.tab02 .ctnt_area li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tab02 .ctnt_area img {
+  width: 100%;
+  height: 100%;
+}
+.tab02 .tab_list {
+  width: 55%;
+  height: 100%;
+}
+.tab02 .tab_list ul {
+  width: 100%;
+  height: 100%;
+}
+.tab02 .tab_btn {
+  height: 20%;
+  text-align: center;
+}
+.tab02 .tab_btn label {
+  display: block;
+  height: 100%;
+  line-height: 100%;
+}
+.tab02 .tab_btn label:hover {
+  color: #000;
+  background-color: #ccc;
+}/*# sourceMappingURL=tab01.css.map */

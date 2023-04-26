@@ -1,0 +1,25 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "맑은 고딕", arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+.wrap {
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 1280px;
+  padding: 32px;
+  box-sizing: border-box;
+  background-color: #ccc;
+}/*# sourceMappingURL=style01.css.map */

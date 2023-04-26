@@ -1,0 +1,103 @@
+/*# sourceMappingURL=import01.css.map */ding: 0;
+}
+
+body {
+  font-family: "맑은 고딕", arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+.wrap {
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 1280px;
+  padding: 32px;
+  box-sizing: border-box;
+  background-color: #ccc;
+}
+
+h2 {
+  font-size: 32px;
+  color: #333;
+  background-color: #ff0;
+}
+
+.login_form input[type=text], .login_form input[type=password], .login_form input[type=email], .login_form input[type=number] {
+  display: block;
+  border: none;
+  background: none;
+  border-radius: 15px;
+  padding: 0;
+  margin: 0;
+  text-indent: 15px;
+  width: 300px;
+  height: 50px;
+  font-size: 18px;
+  margin: 16px auto;
+  border-bottom: 2px solid #000;
+  border-top: 1px solid #eee;
+}
+.login_form button {
+  display: block;
+  width: 300px;
+  height: 45px;
+  margin: 16px auto;
+  border-radius: 15px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  line-height: 45px;
+  font-weight: bold;
+}
+.login_form .sp_img {
+  border-radius: 10px;
+  width: 45px;
+  height: 45px;
+}
+.login_form #naver_logo {
+  background-position: -438px -98px;
+  position: relative;
+  z-index: 2;
+}
+.login_form #kakao_logo {
+  background-position: -145px -203px;
+}
+
+.lgbtn {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.navbtn {
+  background-color: #47B748 !important;
+  color: #fff !important;
+}
+
+.kakbtn {
+  background-color: #F7E600 !important;
+  color: #3A1D1D !important;
+}
+
+.sp_img01 {
+  display: inline-block;
+  background-color: #fff;
+  background-image: url("../images/sns_icon.png");
+  background-size: 734px;
+  border-radius: 10px;
+  width: 43px;
+  height: 43px;
+}
+
+.sp_img02 {
+  display: inline-block;
+  background-image: url("../images/sns_icon.png");
+  background-size: 560px;
+  border-radius: 10px;
+  width: 45px;
+  height: 45px;
+}/*# sourceMappingURL=import01.css.map */

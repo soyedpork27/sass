@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+ul, ol {
+  list-style : none;
+}
+*{
+  margin : 0;
+  padding : 0;
+}
+
+$max-width:1180px;
+
+@function columns($number : 1, $all : 12){
+  @return $max-width * ($number / $all);
+}
+
+.wrap {
+  width : $max-width;
+  border : 3px solid #000;
+  margin : 0 auto;
+  display : flex;
+}
+
+.box {
+  border : 1px solid #000;
+  box-sizing : border-box;
+}
+
+.box01{
+  width : columns(2,6);
+  background-color : #ff0;
+}
+.box02{
+  width : columns(3,6);
+  background-color : #00f;
+}
+.box03{
+  width : columns(1,6);
+  background-color : #0f0;
+}
+
+
+
+// 투명도를 낮추는 내장함수
+// lighten(색상, 정도)
+
+// 
+
+
+@function my-lighten($num){
+  @return 0.1 * $num;
+}
+
+.btn03 {
+  opacity : my-lighten(2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @mixin animation ($delay, $duration, $name) {
+//   animation-delay: $delay;
+//   animation-duration: $duration;
+//   animation-name: $name
+// }
+
+// @mixin keyframe ($animation_name) {
+//   @keyframes #{$animation_name} {
+//       @content;
+//   }
+// }
+
+// @include keyframe(move) {
+//   100%{
+//     width : 95%;
+//   }0%{
+//     width : 0%;
+//   }
+// }
+
+// .target01 {
+//   height : 50px;
+//   width : 95%;
+//   background-color : #ff0;
+//   @include animation (0s, 4s, move);
+// }
+
+// .target02 {
+//   margin-top : 50px;
+//   height : 50px;
+//   width : 95%;
+//   background-color : #ff0;
+//   @include animation (0s, 4s, move);
+// }

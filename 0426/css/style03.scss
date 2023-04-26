@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+div{
+  background-color : pink;
+}
+
+// @for $i from 1 through 5 {
+//   div:nth-of-type(#{$i}){
+//     width : 50px * $i;
+//   }
+// }
+
+@for $i from 1 to 6 {
+  div:nth-of-type(#{$i}){
+    width : 50px * $i;
+  }
+}
+
+$col_arr : #f00 #0f0 #00f;
+
+article h2:nth-child(1){color :  nth($col_arr,1);}
+article h2:nth-child(2){color :  nth($col_arr,2);}
+article h2:nth-child(3){color :  nth($col_arr,3);}
+
+
+$fontSize :("1":12px, "2":18px, "3":24px);
+
+.exec01 {
+  @for $i from 1 through 3 {
+    h2:nth-child(#{$i}) {font-size:map-get($fontSize,#{$i})}
+  }
+}
+
+$i : 1 ;
+.list01 > li {
+  background-color : orange;
+  @while $i <= 30{
+    &:nth-child(#{$i}){
+      width : 100px * $i;
+    }
+    $i : $i+1;
+  }
+}

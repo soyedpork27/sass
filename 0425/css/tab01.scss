@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+*{
+  margin : 0;
+  padding : 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+
+.hidden {
+  display : none;
+}
+
+#tab01-01:checked ~.tab01 .ctnt_area .tab_ctnt:first-child img {
+  display : block;
+}
+#tab01-01:checked ~.tab01 .tab_list .tab_btn:first-child label {
+  background-color : #ff0;
+  color : rgb(118, 118, 255);
+}
+
+#tab01-02:checked ~.tab01 .ctnt_area .tab_ctnt:nth-child(2) img {
+  display : block;
+}
+#tab01-02:checked ~.tab01 .tab_list .tab_btn:nth-child(2) label {
+  background-color : #ff0;
+  color : rgb(118, 118, 255);
+}
+
+#tab01-03:checked ~.tab01 .ctnt_area .tab_ctnt:nth-child(3) img {
+  display : block;
+}
+#tab01-03:checked ~.tab01 .tab_list .tab_btn:nth-child(3) label {
+  background-color : #ff0;
+  color : rgb(118, 118, 255);
+}
+
+#tab01-04:checked ~.tab01 .ctnt_area .tab_ctnt:last-child img {
+  display : block;
+}
+#tab01-04:checked ~.tab01 .tab_list .tab_btn:last-child label {
+  background-color : #ff0;
+  color : rgb(118, 118, 255);
+}
+
+
+
+// 탭 가로 길이, 탭콘텐츠 영역 가로, 탭버튼 세로 비율, 오버배경색, 오버글자색
+@mixin tab($tab_width, $c_width, $btn_height, $bgCol : #000, $fontCol : #fff){
+
+  display : flex;
+  border : 3px solid #aaa;
+  height : 400px;
+  width : $tab_width;
+  margin : 0 auto;
+
+  .ctnt_area{
+    width : $c_width ;
+    height : 100%;
+    position : relative;
+  }
+  .ctnt_area ul {
+    width : 100%;
+    height : 100%;
+  }
+
+  .ctnt_area li {
+    width : 100%;
+    height : 100%;
+    position :absolute;
+    left : 0;
+    top : 0;
+  }
+
+  .ctnt_area img {
+    width : 100%;
+    height : 100%;
+  }
+
+  .tab_list {
+    width : calc(100% - $c_width );
+    height : 100%;
+  }
+
+  .tab_list ul {
+    width : 100%;
+    height : 100%;
+  }
+  
+  .tab_btn {
+    height : $btn_height;
+    text-align : center;
+  }
+
+  .tab_btn label {
+    display : block;
+    height : 100%;
+    line-height : 100%;
+  }
+
+  .tab_btn label:hover {
+    color : $fontCol;
+    background-color : $bgCol;
+  }
+
+}
+
+
+
+
+
+
+
+#tab02-01:checked ~.tab02 .ctnt_area .tab_ctnt:first-child img {
+  display : block;
+}
+#tab02-01:checked ~.tab02 .tab_list .tab_btn:first-child label {
+  background-color : #888;
+  color : #000;
+}
+
+#tab02-02:checked ~.tab02 .ctnt_area .tab_ctnt:nth-child(2) img {
+  display : block;
+}
+#tab02-02:checked ~.tab02 .tab_list .tab_btn:nth-child(2) label {
+  background-color : #888;
+  color : #000;
+}
+
+#tab02-03:checked ~.tab02 .ctnt_area .tab_ctnt:nth-child(3) img {
+  display : block;
+}
+#tab02-03:checked ~.tab02 .tab_list .tab_btn:nth-child(3) label {
+  background-color : #888;
+  color : #000;
+}
+
+#tab02-04:checked ~.tab02 .ctnt_area .tab_ctnt:nth-child(4) img {
+  display : block;
+}
+#tab02-04:checked ~.tab02 .tab_list .tab_btn:nth-child(4) label {
+  background-color : #888;
+  color : #000;
+}
+
+#tab02-05:checked ~.tab02 .ctnt_area .tab_ctnt:last-child img {
+  display : block;
+}
+#tab02-05:checked ~.tab02 .tab_list .tab_btn:last-child label {
+  background-color : #888;
+  color : #000;
+}
+
+
+
+
+.tab01 {
+  @include tab(1100px, 65%, 25%, #ff0, #000);
+  margin-top : 100px;
+}
+
+.tab02 {
+  @include tab(1400px, 45%, 20%, #ccc, #000);
+  margin-top : 100px;
+}
